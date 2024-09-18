@@ -11,7 +11,6 @@ import by.clevertec.util.Util;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -60,8 +59,6 @@ public class Main {
      * Зоопарков неограниченное кол-во, а вы - директор 3-го по счёту зоопарка. Полученных животных вывести в консоль.
      */
     public static List<Animal> task1(List<Animal> animals) {
-        System.out.println("----------");
-        System.out.println("Задача №1");
 
         int minAge = 10;
         int maxAge = 20;
@@ -88,8 +85,6 @@ public class Main {
      * преобразовать к строкам породы животных и вывести в консоль
      */
     public static List<String> task2(List<Animal> animals) {
-        System.out.println("----------");
-        System.out.println("Задача №2");
 
         List<String> sortedJapaneseFemaleAnimals = animals.stream()
                 .filter(animal -> "Japanese".equals(animal.getOrigin()))
@@ -107,8 +102,6 @@ public class Main {
      * Отобрать всех животных старше 30 лет и вывести все страны происхождения без дубликатов начинающиеся на "A"
      */
     public static List<String> task3(List<Animal> animals) {
-        System.out.println("----------");
-        System.out.println("Задача №3");
 
         int minAge = 30;
 
@@ -130,8 +123,6 @@ public class Main {
      * Подсчитать количество всех животных пола = Female. Вывести в консоль
      */
     public static long task4(List<Animal> animals) {
-        System.out.println("----------");
-        System.out.println("Задача №4");
 
         long countFemaleAnimals = animals.stream()
                 .filter(animal -> animal.getGender().equals("Female"))
@@ -148,8 +139,6 @@ public class Main {
      * Есть ли среди них хоть одно из страны Венгрия (Hungarian)? Ответ вывести в консоль
      */
     public static void task5() {
-        System.out.println("----------");
-        System.out.println("Задача №5");
 
         List<Animal> animals = Util.getAnimals();
 
@@ -169,8 +158,6 @@ public class Main {
      * Взять всех животных. Все ли они пола Male и Female? Ответ вывести в консоль
      */
     public static void task6() {
-        System.out.println("----------");
-        System.out.println("Задача №6");
 
         List<Animal> animals = Util.getAnimals();
 
@@ -186,8 +173,6 @@ public class Main {
      * Взять всех животных. Узнать что ни одно из них не имеет страну происхождения Oceania. Ответ вывести в консоль
      */
     public static void task7() {
-        System.out.println("----------");
-        System.out.println("Задача №7");
 
         List<Animal> animals = Util.getAnimals();
 
@@ -204,8 +189,6 @@ public class Main {
      * Вывести в консоль возраст самого старого животного
      */
     public static void task8() {
-        System.out.println("----------");
-        System.out.println("Задача №8");
 
         List<Animal> animals = Util.getAnimals();
 
@@ -229,8 +212,6 @@ public class Main {
      * Вывести в консоль длину самого короткого массива
      */
     public static void task9() {
-        System.out.println("----------");
-        System.out.println("Задача №9");
 
         List<Animal> animals = Util.getAnimals();
 
@@ -255,8 +236,6 @@ public class Main {
      * Сигнатура метода изменена для теста!
      */
     public static int task10(List<Animal> animals) {
-        System.out.println("----------");
-        System.out.println("Задача №10");
 
         int totalAge = animals.stream()
                 .mapToInt(Animal::getAge)
@@ -274,8 +253,6 @@ public class Main {
      * Вывести результат в консоль
      */
     public static void task11() {
-        System.out.println("----------");
-        System.out.println("Задача №11");
 
         List<Animal> animals = Util.getAnimals();
 
@@ -300,8 +277,6 @@ public class Main {
      * Однако взять на обучение академия может только 200 человек. Вывести их в консоль.
      */
     public static void task12() {
-        System.out.println("----------");
-        System.out.println("Задача №12");
 
         List<Person> persons = Util.getPersons();
 
@@ -329,8 +304,6 @@ public class Main {
      * Вывести всех людей попадающих в первый этап эвакуации в порядке приоритета в консоль
      */
     public static void task13() {
-        System.out.println("----------");
-        System.out.println("Задача №13");
 
         List<House> houses = Util.getHouses();
 
@@ -373,8 +346,6 @@ public class Main {
      * Сигнатура метода изменена для теста!
      */
     public static Double task14(List<Car> cars) {
-        System.out.println("----------");
-        System.out.println("Задача №14");
 
         double costPerTon = 7.14;
 
@@ -449,8 +420,6 @@ public class Main {
      * Сигнатура метода изменена для теста!
      */
     public static Double task15(List<Flower> flowers) {
-        System.out.println("----------");
-        System.out.println("Задача №15");
 
         List<Flower> sortedFlowers = flowers.stream()
                 .sorted(Comparator.comparing(Flower::getOrigin).reversed()
@@ -490,8 +459,6 @@ public class Main {
      * Сигнатура метода изменена для теста!
      */
     public static List<Student> task16(List<Student> students) {
-        System.out.println("----------");
-        System.out.println("Задача №16");
 
         List<Student> sortedStudents = students.stream()
                 .filter(student -> student.getAge() < 18)
@@ -535,8 +502,6 @@ public class Main {
      * Выводить название факультета и средний возраст в порядке убывания возраста.
      */
     public static void task18() {
-        System.out.println("----------");
-        System.out.println("Задача №18");
 
         List<Student> students = Util.getStudents();
         students.stream()
@@ -556,8 +521,6 @@ public class Main {
      * Вывод списка студентов заданной группы, у которых сдан 3 экзамен (>4).
      */
     public static void task19() {
-        System.out.println("----------");
-        System.out.println("Задача №19");
 
         List<Student> students = Util.getStudents();
         List<Examination> examinations = Util.getExaminations();
@@ -582,8 +545,6 @@ public class Main {
      * Определение факультета с максимальной средней оценкой по первому экзамену.
      */
     public static void task20() {
-        System.out.println("----------");
-        System.out.println("Задача №20");
 
         List<Student> students = Util.getStudents();
         List<Examination> examinations = Util.getExaminations();
@@ -612,8 +573,6 @@ public class Main {
      * Сигнатура метода изменена для теста!
      */
     public static Map<String, Long> task21(List<Student> students) {
-        System.out.println("----------");
-        System.out.println("Задача №21");
 
         Map<String, Long> countStudentsAtFaculty = students.stream()
                 .collect(Collectors.groupingBy(
@@ -635,8 +594,6 @@ public class Main {
      * Сигнатура метода изменена для теста!
      */
     public static Map<String, Integer> task22(List<Student> students) {
-        System.out.println("----------");
-        System.out.println("Задача №22");
 
         Map<String, Integer> minAgeByFaculty = students.stream()
                 .collect(Collectors.toMap(
